@@ -1,0 +1,156 @@
+--title Getting to Know Go
+--author Robert "Anthony" Bittle
+--date October 6th, 2016
+
+--center Twitter - @guywithnose
+
+--center Code/Slides - github.com/DE-DevCon/2016-getting-to-know-go
+
+--center Screen - de-devcon.robertabittle.com
+
+--center Survey - devcon.dominionenterprises.com/2016/survey
+--footer Code/Slides: https://goo.gl/KMFrM8    |    Screen: https://goo.gl/tJHgq6    |    Survey: https://goo.gl/ZHmj4k
+--newpage Intro
+
+--boldon
+--center * Get you started
+
+--boldon
+--center * Show off the basic features
+
+--boldon
+--center * Interactive
+---
+
+--boldon
+--center * Please ask questions
+--newpage Why Go
+
+--boldon
+--center * Fast
+
+--boldon
+--center * Typed
+
+--boldon
+--center * Simple
+--## Very few reserved words
+
+--boldon
+--center * Opinionated
+
+--boldon
+--center * Well Documented
+
+--boldon
+--center * Concurency
+
+--boldon
+--center * Community
+--newpage Hello World
+--include-file helloWorld/main.go
+---
+--newpage Variables
+--include-file variables/main.go
+---
+--include-file implicitVariables/main.go
+--newpage Functions
+--include-file functions/main.go
+--newpage Multiple Return Values
+--include-file functionsMultipleReturn/main.go
+--newpage Multiple Named Return Values
+--include-file functionsMultipleReturn2/main.go
+--newpage Errors
+--include-file errors/main.go
+--newpage Zero Values
+--include-file zeroValues/main.go
+--beginshelloutput
+false, 0, '', 0.000000, '0'
+--endshelloutput
+--endoutput
+--newpage Loops
+--## There is no while
+--include-file loops/main.go
+--newpage Tests
+--include-file tests/library.go
+--include-file tests/library_test.go
+--newpage Arrays
+--include-file arrays/main.go
+--newpage Slices
+--include-file slices/main.go
+--newpage Maps
+--include-file maps/main.go
+--newpage Conditionals
+--include-file conditionals/main.go
+--## No parentheses on control structures
+--newpage Switch
+--include-file switch/main.go
+--newpage Switch Fallthrough
+--include-file switchFallthrough/main.go
+--newpage Switch True
+--include-file switchFizzBuzz/main.go
+--newpage Installation
+https://golang.org/doc/install
+
+Editor Integrations (Optional)
+
+* Vim
+  https://github.com/fatih/vim-go
+
+* Visual Studio Code
+  https://marketplace.visualstudio.com/items?itemName=lukehoban.Go
+
+* Sublime
+  https://github.com/DisposaBoy/GoSublime
+--newpage Exercise 1
+--include-file exercise1/diffSquares.go
+--newpage Structs
+--include-file structs/main.go
+--newpage Objects
+--include-file objects/main.go
+--newpage Modifier Methods
+--include-file modifierMethods/main.go
+--newpage Interfaces
+--include-file interfaces/interface.go
+--newpage Interfaces
+--include-file interfaces/main.go
+--newpage Type Assertion
+--include-file typeAssertion/main.go
+--newpage Type Switch
+--include-file typeSwitch/main.go
+--newpage Concurrency
+--include-file concurrency/main.go
+--newpage WaitGroups
+--include-file waitGroups/main.go
+--newpage Channels
+--include-file channels/main.go
+--newpage Select
+--include-file select/main.go
+--newpage Timers
+--include-file timers/main.go
+--newpage Select Non-Blocking
+--include-file selectNoBlock/main.go
+--newpage Tools
+* gofmt
+* golint
+* go tool vet
+* guru `guru what slices/main.go:#148`
+--newpage Gotchas
+* GOPATH
+* Google 'golang' not 'go'
+* Channels are great, but don't overuse
+* No generics
+--newpage Packages
+* Exported functions start with capital letter
+* go get
+--newpage Defer
+--include-file defer/main.go
+--newpage Web/HTTP
+--include-file web/main.go
+--newpage Resources
+https://gobyexample.com
+https://tour.golang.org
+https://golang.org/doc/code.html
+https://golang.org/doc/effective_go.html
+https://godoc.org/
+http://exercism.io/

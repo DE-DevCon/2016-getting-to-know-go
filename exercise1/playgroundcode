@@ -1,0 +1,63 @@
+// Adapted from the Exorcism Difference of Squares Golang exercise http://exercism.io/exercises/go/difference-of-squares/readme
+// https://github.com/exercism/xgo/blob/master/exercises/difference-of-squares/difference_of_squares_test.go
+
+package main
+
+import "testing"
+
+// SquareOfSums returns (1 + 2 + 3 + ... + n) squared
+func SquareOfSums(n int) int {
+    // Write Code here
+}
+
+// SumOfSquares returns (1 * 1 + 2 * 2 + 3 * 3 + ... + n * n)
+func SumOfSquares(n int) (s int) {
+    // Write Code here
+}
+
+// Difference returns the difference between SquareOfSums(n) and SumOfSquares(n)
+func Difference(n int) int {
+    return SquareOfSums(n) - SumOfSquares(n)
+}
+
+
+
+
+
+
+func main() {
+	tests := []testing.InternalTest{{"TestDifference", TestDifference}}
+	matchAll := func(t string, pat string) (bool, error) { return true, nil }
+	testing.Main(matchAll, tests, nil, nil)
+}
+
+var tests = []struct{ n, sqOfSums, sumOfSq int }{
+	{5, 225, 55},
+	{10, 3025, 385},
+	{100, 25502500, 338350},
+}
+
+func TestSquareOfSums(t *testing.T) {
+	for _, test := range tests {
+		if s := SquareOfSums(test.n); s != test.sqOfSums {
+			t.Fatalf("SquareOfSums(%d) = %d, want %d", test.n, s, test.sqOfSums)
+		}
+	}
+}
+
+func TestSumOfSquares(t *testing.T) {
+	for _, test := range tests {
+		if s := SumOfSquares(test.n); s != test.sumOfSq {
+			t.Fatalf("SumOfSquares(%d) = %d, want %d", test.n, s, test.sumOfSq)
+		}
+	}
+}
+
+func TestDifference(t *testing.T) {
+	for _, test := range tests {
+		want := test.sqOfSums - test.sumOfSq
+		if s := Difference(test.n); s != want {
+			t.Fatalf("Difference(%d) = %d, want %d", test.n, s, want)
+		}
+	}
+}

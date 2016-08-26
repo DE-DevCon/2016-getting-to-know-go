@@ -1,0 +1,21 @@
+<html>
+<head></head>
+<body>
+    <form method="POST">
+        <input type="text" name="data">
+        <button>Submit</button>
+        <a href="/reset">Reset</a>
+    </form>
+    {{ if .Values }}
+        <ul>
+        {{ range .Values }}
+            <li>
+            {{ . }}
+            </li>
+        {{end}}
+        </ul>
+    {{ else }}
+        No Data.
+    {{ end }}
+</body>
+</html>
